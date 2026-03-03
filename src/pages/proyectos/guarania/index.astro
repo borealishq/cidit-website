@@ -1,18 +1,19 @@
 ---
-import "../../styles/guarania.css";
+import "../../../styles/projects/guarania.css";
 
-import ProjectLayout from "../../layouts/projectLayout.astro";
+import ProjectLayout from "../../../layouts/projectLayout.astro";
 
-import Hero from "../../projectsComponents/guarania/Hero.tsx";
-import ProjectComponents from "../../projectsComponents/guarania/ProjectComponents.tsx";
-import BoxedContent from "../../projectsComponents/guarania/BoxedContent.tsx";
-import Staff from "../../projectsComponents/Staff.tsx";
-import Sponsors from "../../projectsComponents/guarania/Sponsors.tsx";
-import Reviews from "../../projectsComponents/guarania/Reviews.tsx";
+import Hero from "../../../projectsComponents/guarania/Hero.tsx";
+import ProjectComponents from "../../../projectsComponents/guarania/ProjectComponents.tsx";
+import BoxedContent from "../../../projectsComponents/guarania/BoxedContent.tsx";
+import Staff from "../../../projectsComponents/Staff.tsx";
+import Sponsors from "../../../projectsComponents/guarania/Sponsors.tsx";
+import Reviews from "../../../projectsComponents/guarania/Reviews.tsx";
+import Gallery from "../../../projectsComponents/guarania/Gallery.tsx";
 
-import { staticPath } from "../../utils/staticPath";
+import { staticPath } from "../../../utils/staticPath";
 
-import type { StaffType } from "./types.d.ts";
+import type { StaffType } from "../types.d.ts";
 
 const staff = [
 	{
@@ -151,7 +152,8 @@ const staff = [
 	<Hero />
 	<ProjectComponents />
 	<BoxedContent />
-	<div class="h-71"></div>
+	<Gallery client:only="react" />
+	<div class="h-21"></div>
 	<Staff
 		{...{
 			staff,

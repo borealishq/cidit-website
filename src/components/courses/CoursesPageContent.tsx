@@ -9,7 +9,7 @@ import { staticPath } from "../../utils/staticPath";
 export default function CoursesPageContent() {
 	return (
 		<>
-			<PageHeaderAnimated headline="Cursos" />
+			<PageHeaderAnimated headline="Cursos y Servicios en el Sector Vial" />
 
 			<div className="inner-service-3-area service-3-spacing inner-service-3-pin-wrap pb-60 black-bg">
 				<Course

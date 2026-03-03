@@ -10,7 +10,9 @@ export default function PageHeaderAnimated({ headline }: Props) {
 					<div className="swiper-wrapper slide-transtion">
 						<div className="swiper-slide">
 							<div className="sa-hero-text-item">
-								<h3 className="sa-hero-text-title">{headline}</h3>
+								<h3 className="sa-hero-text-title leading-tight!">
+									{headline}
+								</h3>
 							</div>
 						</div>
 					</div>

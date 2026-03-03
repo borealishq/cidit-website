@@ -8,6 +8,61 @@ type Props = {
 	pathname?: string;
 };
 
+const navbar = [
+	// {
+	// 	label: "Inicio",
+	// 	href: "/",
+	// },
+	// {
+	// 	label: "Cursos",
+	// 	href: "/cursos",
+	// },
+	// {
+	// 	label: "Proyectos",
+	// 	href: "/proyectos",
+	// },
+	// {
+	// 	label: "Publicaciones",
+	// 	href: "/publicaciones",
+	// },
+	// {
+	// 	label: "Nosotros",
+	// 	href: "/nosotros",
+	// },
+	// {
+	// 	label: "Contacto",
+	// 	href: "/contacto",
+	// },
+	{
+		label: "Inicio",
+		href: "/",
+	},
+	{
+		label: "Cursos y Servicios en el Sector Vial",
+		href: "/cursos",
+	},
+	{
+		label: "DJ Code – Formación en Tecnología",
+		href: "/proyectos/djcode",
+	},
+	{
+		label: "Proyectos de investigación",
+		href: "/proyectos",
+	},
+	{
+		label: "Acerca de nosotros",
+		href: "/nosotros",
+	},
+	{
+		label: "Publicaciones",
+		href: "/publicaciones",
+	},
+	{
+		label: "Contacto",
+		href: "/contacto",
+	},
+];
+
 export default function Header({
 	baseLogoColor,
 	baseMenuLight,
@@ -43,48 +98,15 @@ export default function Header({
 							>
 								<nav className="tp-mobile-menu-active">
 									<ul>
-										<li>
-											{pathname === "/" ? (
-												<span>Inicio</span>
-											) : (
-												<a href={staticPath("/")}>Inicio</a>
-											)}
-										</li>
-										<li>
-											{pathname === "/cursos" ? (
-												<span>Cursos</span>
-											) : (
-												<a href={staticPath("/cursos")}>Cursos</a>
-											)}
-										</li>
-										<li>
-											{pathname === "/proyectos" ? (
-												<span>Proyectos</span>
-											) : (
-												<a href={staticPath("/proyectos")}>Proyectos</a>
-											)}
-										</li>
-										<li>
-											{pathname === "/publicaciones" ? (
-												<span>Publicaciones</span>
-											) : (
-												<a href={staticPath("/publicaciones")}>Publicaciones</a>
-											)}
-										</li>
-										<li>
-											{pathname === "/nosotros" ? (
-												<span>Nosotros</span>
-											) : (
-												<a href={staticPath("/nosotros")}>Nosotros</a>
-											)}
-										</li>
-										<li>
-											{pathname === "/contacto" ? (
-												<span>Contacto</span>
-											) : (
-												<a href={staticPath("/contacto")}>Contacto</a>
-											)}
-										</li>
+										{navbar.map((item) => (
+											<li key={item.href}>
+												{pathname === item.href ? (
+													<span>{item.label}</span>
+												) : (
+													<a href={staticPath(item.href)}>{item.label}</a>
+												)}
+											</li>
+										))}
 									</ul>
 								</nav>
 							</div>
