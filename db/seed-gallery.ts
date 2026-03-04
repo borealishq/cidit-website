@@ -1,0 +1,208 @@
+import { db, Gallery } from "astro:db";
+
+export default async function seedGallery() {
+	await db.insert(Gallery).values([
+		// COMUNIDAD E INDIGENA
+		{
+			id: 1,
+			name: "CEI001",
+			title: "CDE - <span>Atracadero</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 2,
+			name: "CEI002",
+			title: "<span>Cruz Roja Paraguaya</span> - Filial Alto Paraná",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 3,
+			name: "CEI003",
+			title: "Juan E. Oleary - <span>San Isidro Norte</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 4,
+			name: "CEI004",
+			title: "Caaguazú - <span>Bo. San Lorenzo</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 5,
+			name: "CEI005",
+			title: "Caazapá - <span>Bo. Cristo Rey</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 6,
+			name: "CEI006",
+			title: "Caaguazú - <span>Comunidad Kambay</span> – Cerrito",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 7,
+			name: "CEI007",
+			title: "<span>Comunidad Kambay</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 8,
+			name: "CEI008",
+			title: "Guaira, Paso Yobai - <span>Comunidad Santa Teresita</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		{
+			id: 9,
+			name: "CEI009",
+			title: "Guaira, Colonia Independencia - <span>Comunidad Azucena</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 1,
+		},
+		// SERVICIOS SOCIALES
+		{
+			id: 10,
+			name: "SSP001",
+			title: "Municipalidad de <span>Caaguazú</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 11,
+			name: "SSP002",
+			title: "Municipalidad de <span>Caazapá</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 12,
+			name: "SSP003",
+			title: "Municipalidad de <span>Coronel Oviedo</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 13,
+			name: "SSP004",
+			title: "Municipalidad de <span>Hernandarias</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 14,
+			name: "SSP005",
+			title: "Municipalidad de <span>Independencia</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 15,
+			name: "SSP006",
+			title: "Municipalidad de <span>Presidente Franco</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 16,
+			name: "SSP007",
+			title: "Municipalidad de <span>San Juan Nepomuceno</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 17,
+			name: "SSP008",
+			title: "Municipalidad de <span>Villarrica</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		{
+			id: 18,
+			name: "SSP009",
+			title: "Municipalidad de <span>Oleary</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 2,
+		},
+		// EDUCACIÓN
+		{
+			id: 19,
+			name: "EDU001",
+			title: "Alto Paraná - <span>Colegio Hernandarias</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 20,
+			name: "EDU002",
+			title: "Alto Paraná - <span>Colegio JPII</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 21,
+			name: "EDU003",
+			title: "Alto Paraná - <span>Colegio O'Leary</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 22,
+			name: "EDU004",
+			title: "Alto Paraná - <span>Colegio Presidente Franco</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 23,
+			name: "EDU005",
+			title:
+				"Alt2o Paraná - <span>Dirección Departamental de Educación AP</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 24,
+			name: "EDU006",
+			title: "Caaguazú - <span>San Lorenzo</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 25,
+			name: "EDU007",
+			title: "Caaguazú - <span>Colegio Inmaculada</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 26,
+			name: "EDU008",
+			title: "Caaguazú - <span>Colegio Sabino Rolón</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 27,
+			name: "EDU009",
+			title: "Caazapá - <span>Colegio Defensores del Chaco</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+		{
+			id: 28,
+			name: "EDU010",
+			title: "Guairá - <span>Colegio Natalicio Talavera</span>",
+			cover_src: "projects/img/blog/preview/1000x1250_prv-01.webp",
+			categoryId: 3,
+		},
+	]);
+
+	console.log("- Galleries seeded!");
+}

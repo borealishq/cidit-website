@@ -15,6 +15,22 @@ import { staticPath } from "../../../utils/staticPath";
 
 import type { StaffType } from "../types.d.ts";
 
+import { db, GalleryCategory, Gallery as GalleryDb } from "astro:db";
+
+const categories = await db.select().from(GalleryCategory);
+const galleries = await db.select().from(GalleryDb);
+
+const galleryData = categories.map((category) => ({
+	headline: category.headline,
+	items: galleries
+		.filter((g) => g.categoryId === category.id)
+		.map((g) => ({
+			title: g.title,
+			slug: g.name,
+			cover_src: g.cover_src,
+		})),
+}));
+
 const staff = [
 	{
 		name: "Luca Cernuzzi",
@@ -152,7 +168,7 @@ const staff = [
 	<Hero />
 	<ProjectComponents />
 	<BoxedContent />
-	<Gallery client:only="react" />
+	<Gallery client:only="react" {...{ gallery: galleryData }} />
 	<div class="h-21"></div>
 	<Staff
 		{...{

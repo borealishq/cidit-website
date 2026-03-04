@@ -1,9 +1,7 @@
 import { staticPath } from "../../utils/staticPath";
 import HTMLReactParser from "html-react-parser/lib/index";
 
-// JSON DATA
-import galleryCEI001 from "./static/gallery-CEI001.json";
-
+/**
 const gallery = [
 	// COMUNIDAD E INDIGENA
 	{
@@ -144,8 +142,22 @@ const gallery = [
 		cover_src: string;
 	}[];
 }[];
+ */
 
-export default function Gallery() {
+export interface GalleryItem {
+	title: string;
+	slug: string;
+	cover_src: string;
+}
+
+export interface GalleryGroup {
+	headline: string;
+	items: GalleryItem[];
+}
+
+export default function Gallery({ gallery }: { gallery: GalleryGroup[] }) {
+	console.log("gallery", gallery);
+
 	return (
 		<>
 			<div className="mxd-section padding-blog pt-36! pb-10!">
@@ -182,7 +194,10 @@ export default function Gallery() {
 										</div>
 
 										{group.items.map((e, idx) => (
-											<div className="col-12 col-xl-4 mxd-blog-preview__item mxd-grid-item animate-card-3">
+											<div
+												className="col-12 col-xl-4 mxd-blog-preview__item mxd-grid-item animate-card-3"
+												key={idx}
+											>
 												<a
 													className="mxd-blog-preview__media cursor-pointer"
 													href={staticPath(
