@@ -10,6 +10,7 @@ import Staff from "../../../projectsComponents/Staff.tsx";
 import Sponsors from "../../../projectsComponents/guarania/Sponsors.tsx";
 import Reviews from "../../../projectsComponents/guarania/Reviews.tsx";
 import Gallery from "../../../projectsComponents/guarania/Gallery.tsx";
+import StaffList from "../../../projectsComponents/guarania/StaffList.tsx";
 
 import { staticPath } from "../../../utils/staticPath";
 
@@ -24,11 +25,7 @@ const galleryData = categories.map((category) => ({
 	headline: category.headline,
 	items: galleries
 		.filter((g) => g.categoryId === category.id)
-		.map((g) => ({
-			title: g.title,
-			slug: g.name,
-			cover_src: g.cover_src,
-		})),
+		.map((g) => ({ ...g })),
 }));
 
 const staff = [
@@ -170,7 +167,8 @@ const staff = [
 	<BoxedContent />
 	<Gallery client:only="react" {...{ gallery: galleryData }} />
 	<div class="h-21"></div>
-	<Staff
+	<StaffList />
+	<!-- <Staff
 		{...{
 			staff,
 			description: `<p>Un equipo de experimentados investigadores 
@@ -178,7 +176,7 @@ const staff = [
 										artificial, comprometidos en revolucionar la 
 										predicción de complejos proteicos.</p>`,
 		}}
-	/>
+	/> -->
 	<Sponsors />
 	<Reviews />
 </ProjectLayout>

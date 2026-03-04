@@ -2,7 +2,7 @@ import { staticPath } from "../utils/staticPath";
 
 const reviews = [
 	{
-		picture: "assets/img/reviews/portrait-3.avif",
+		picture: "assets/img/reviews/diego-gonzales.avif",
 		name: "Diego Rubén González",
 		position: "Ingeniero",
 		review:
