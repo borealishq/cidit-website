@@ -33,6 +33,7 @@ const team = {
 		"Vivian Caje",
 		"Tomás López",
 		"Julia Fernández",
+		"Marcelo De Los Santos",
 	],
 };
 

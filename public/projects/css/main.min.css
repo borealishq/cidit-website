@@ -420,9 +420,9 @@
 .headline-img-01::before {
 	background-image: url(../img/illustrations/400x200_hdl-01.webp);
 }
-.headline-img-02::before {
+/* .headline-img-02::before {
 	background-image: url(../img/illustrations/400x200_hdl-02.webp);
-}
+} */
 .headline-img-03::after {
 	background-image: url(../img/illustrations/400x200_hdl-03.webp);
 }

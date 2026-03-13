@@ -1,6 +1,14 @@
 import { staticPath } from "../../utils/staticPath";
 import { cn } from "../../utils/cn.ts";
 
+/**
+ * NO BORRAR ESTO!!
+ *
+ * before:bg-[url(/projects/img/guarania/hero-mini-picture.avif)]!
+ * before:bg-[url(/cidit-website/projects/img/guarania/hero-mini-picture.avif)]!
+ *
+ */
+
 export default function Hero() {
 	return (
 		<div className="mxd-section mxd-section-inner-headline padding-s-text-pre-block bg-gn-primary-600! relative overflow-hidden">
@@ -24,7 +32,7 @@ export default function Hero() {
 												"inner-headline__title headline-img-before headline-img-02 loading__item text-white!",
 												"before:hidden! before:rounded-full! lg:before:w-80! lg:before:h-40! lg:before:inline-flex!",
 												`before:bg-[url(${staticPath(
-													"projects/img/guarania/tupi-guarani.jpg"
+													"projects/img/guarania/hero-mini-picture.avif"
 												)})]!`
 											)}
 										>
@@ -100,11 +108,3 @@ export default function Hero() {
 		</div>
 	);
 }
-
-/**
- * NO BORRAR ESTO!!
- *
- * before:bg-[url(/projects/img/guarania/tupi-guarani.jpg)]!
- * before:bg-[url(/cidit-website/projects/img/guarania/tupi-guarani.jpg)]!
- *
- */

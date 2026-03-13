@@ -7,12 +7,12 @@ export default function Promo() {
 				<div className="mxd-block">
 					<div className="mxd-stats-cards">
 						<div className="container-fluid px-0">
-							<div className="grid grid-cols-2 gap-15">
-								<div className="mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right h-300!">
-									<div className="mxd-stats-cards__inner align-end radius-m padding-0! bg-gn-primary-400!">
+							<div className="grid grid-cols-2 gap-15 lg:gap-0">
+								<div className="mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right lg:h-360!">
+									<div className="padding-0!">
 										<a
 											href={staticPath(
-												"projects/img/guarania/explicacion-del-mboe-hara-digital.pdf"
+												"documents/brochure-mboe-hara-info-voluntarios-guarania.pdf"
 											)}
 											target="_blank"
 										>
@@ -21,28 +21,62 @@ export default function Promo() {
 													"projects/img/guarania/mboe-hara-digital.avif"
 												)}
 												alt="Illustration"
-												className="size-full! object-cover"
+												className="size-full! object-cover aspect-square! radius-m"
 											/>
+
+											<p className="text-gray-800! text-center pt-2">
+												Conoce más acerca de esta iniciativa
+											</p>
 										</a>
+
+										<div className="flex justify-center mt-5">
+											<a
+												className="btn btn-anim btn-default btn-mobile-icon btn-outline"
+												href="https://ciditpy.org/proyectos-cidit/guarania/postulacion/"
+												target="_blank"
+												aria-label="Aplica aquí"
+											>
+												<span className="btn-caption">Aplica aquí</span>
+												<i className="ph ph-arrow-up-right"></i>
+											</a>
+										</div>
 									</div>
 								</div>
 
-								<div className="mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right h-300!">
-									<div className="mxd-stats-cards__inner align-end radius-m padding-0! bg-gn-primary-400!">
+								<div className="mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right lg:h-360!">
+									<div className="padding-0!">
 										<a
 											href={staticPath(
-												"projects/img/guarania/explicacion-del-mboe-hara-digital.pdf"
+												"documents/brochure-mboe-hara-info-voluntarios-guarania.pdf"
 											)}
 											target="_blank"
 										>
 											<img
 												src={staticPath(
-													"projects/img/guarania/mboe-hara-digital.avif"
+													"projects/img/guarania/rastro-guarani.avif"
 												)}
 												alt="Illustration"
-												className="size-full! object-cover"
+												className="size-full! object-cover aspect-square! radius-m"
 											/>
+
+											<p className="text-gray-800! text-center pt-2">
+												Más información sobre qué materiales donar
+											</p>
 										</a>
+
+										<div className="flex justify-center mt-5">
+											<a
+												className="btn btn-anim btn-default btn-mobile-icon btn-outline"
+												href="https://ciditpy.org/proyectos-cidit/guarania/ficha-del-donante/"
+												target="_blank"
+												aria-label="Registra tu donación aquí"
+											>
+												<span className="btn-caption">
+													Registra tu donación aquí
+												</span>
+												<i className="ph ph-arrow-up-right"></i>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>

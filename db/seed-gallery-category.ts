@@ -4,7 +4,7 @@ export default async function () {
 	await db.insert(GalleryCategory).values([
 		{
 			id: 1,
-			headline: "Comunidad e Indígena",
+			headline: "Comunidad y Organizaciones Voluntarias",
 		},
 		{
 			id: 2,

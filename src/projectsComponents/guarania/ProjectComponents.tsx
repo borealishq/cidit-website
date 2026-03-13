@@ -21,14 +21,16 @@ export default function ProjectComponents() {
 												className="btn btn-anim btn-default btn-outline opposite slide-right-up"
 												href="#"
 											>
-												<span className="btn-caption">Concé más</span>
+												<span className="btn-caption">
+													Ver resultados del diagnóstico
+												</span>
 												<i className="ph-bold ph-arrow-up-right"></i>
 											</a>
 										</div>
 										<img
-											src={staticPath("projects/img/guarania/card-1-bg.jpg")}
+											src={staticPath("projects/img/guarania/card-1-bg.avif")}
 											alt="Illustration"
-											className="absolute bottom-0 inset-x-0 object-cover h-4/5! mask-t-from-0"
+											className="absolute bottom-0 inset-x-0 object-cover h-full! mix-blend-soft-light"
 										/>
 									</div>
 								</div>
@@ -61,9 +63,9 @@ export default function ProjectComponents() {
 
 										<div className="mxd-stats-cards__image mxd-stats-cards-image-3 w-2/3! h-full!">
 											<img
-												src={staticPath("projects/img/guarania/women.avif")}
+												src={staticPath("projects/img/guarania/card-3-bg.avif")}
 												alt="Illustration"
-												className="w-full h-full! object-contain object-bottom-right"
+												className="size-full! object-cover object-top-right mask-l-from-70%"
 											/>
 										</div>
 									</div>

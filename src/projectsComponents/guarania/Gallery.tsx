@@ -26,11 +26,11 @@ export default function Gallery({ gallery }: { gallery: GalleryGroup[] }) {
 											<h2 className="reveal-type anim-uni-in-up">Galería</h2>
 										</div>
 									</div>
-									<div className="col-12 col-xl-4 mxd-grid-item no-margin">
+									<div className="col-12 col-xl-6 mxd-grid-item no-margin">
 										<div className="mxd-section-title__hrdescr">
-											<p className="anim-uni-in-up">
-												Implementación del uso de las herramientas de IA a
-												través de pruebas piloto en las comunidades.
+											<p className="anim-uni-in-up text-5xl!">
+												Diagnostico por sectores priorizados y Socialización de
+												resultados por territorios
 											</p>
 										</div>
 									</div>
