@@ -82,7 +82,7 @@ export default function Python() {
 										<div></div>
 
 										<img
-											src={staticPath("projects/img/bootcamp/py-bg-2.avif")}
+											src={staticPath("projects/img/bootcamp/kM9pQ3wL.avif")}
 											alt="Service/Feature Image"
 											className="w-auto! h-250! object-cover right-0 bottom-0 absolute mask-l-from-50%"
 										/>

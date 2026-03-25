@@ -14,53 +14,57 @@ export default function NextSteps() {
 									role="list"
 								>
 									<div
-										className="mxd-pinned__img-item bg-[#44e4a7]"
+										className="mxd-pinned__img-item overflow-hidden"
 										role="listitem"
 									>
 										<img
-											src={staticPath("projects/img/bootcamp/ns-1.avif")}
+											src={staticPath("projects/img/bootcamp/gJ5hV3nM.avif")}
 											alt="Image"
-											className="w-3/5! h-auto object-cover"
+											className="size-full! object-cover"
 										/>
 									</div>
+
 									<div
-										className="mxd-pinned__img-item bg-[#ffed85]"
+										className="mxd-pinned__img-item overflow-hidden"
 										role="listitem"
 									>
 										<img
-											src={staticPath("projects/img/bootcamp/ns-2.avif")}
+											src={staticPath("projects/img/bootcamp/tB7kP9fX.avif")}
 											alt="Image"
-											className="w-3/5! h-auto object-cover"
+											className="size-full! object-cover"
 										/>
 									</div>
+
 									<div
-										className="mxd-pinned__img-item bg-[#F388F6]"
+										className="mxd-pinned__img-item overflow-hidden"
 										role="listitem"
 									>
 										<img
-											src={staticPath("projects/img/bootcamp/ns-3.avif")}
+											src={staticPath("projects/img/bootcamp/R2dG4zS1.avif")}
 											alt="Image"
-											className="w-3/5! h-auto object-cover"
+											className="size-full! object-cover"
 										/>
 									</div>
+
 									<div
-										className="mxd-pinned__img-item bg-[#FDA26B]"
+										className="mxd-pinned__img-item overflow-hidden"
 										role="listitem"
 									>
 										<img
-											src={staticPath("projects/img/bootcamp/ns-4.avif")}
+											src={staticPath("projects/img/bootcamp/wQ6vN8mK.avif")}
 											alt="Image"
-											className="w-3/5! h-auto object-cover"
+											className="size-full! object-cover"
 										/>
 									</div>
+
 									<div
-										className="mxd-pinned__img-item bg-[#82C9FF]"
+										className="mxd-pinned__img-item overflow-hidden"
 										role="listitem"
 									>
 										<img
-											src={staticPath("projects/img/bootcamp/ns-5.avif")}
+											src={staticPath("projects/img/bootcamp/Y3jL5pT9.avif")}
 											alt="Image"
-											className="w-3/5! h-auto object-cover"
+											className="size-full! object-cover"
 										/>
 									</div>
 								</div>

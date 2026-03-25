@@ -29,7 +29,7 @@ export default function Footer({ title, logoSrc }: Props) {
 										href={staticPath("/proyectos/guarania")}
 										className="footer-nav__link btn-anim"
 									>
-										<span className="btn-caption">GuaranIA</span>
+										<span className="btn-caption min-h-16!">GuaranIA</span>
 									</a>
 								</li>
 								<li className="footer-nav__item anim-uni-in-up">
@@ -37,7 +37,7 @@ export default function Footer({ title, logoSrc }: Props) {
 										href={staticPath("/proyectos/proteia")}
 										className="footer-nav__link btn-anim"
 									>
-										<span className="btn-caption">ProteIA</span>
+										<span className="btn-caption min-h-16!">ProteIA</span>
 									</a>
 								</li>
 								<li className="footer-nav__item anim-uni-in-up">
@@ -45,7 +45,7 @@ export default function Footer({ title, logoSrc }: Props) {
 										href={staticPath("/proyectos/cofar")}
 										className="footer-nav__link btn-anim"
 									>
-										<span className="btn-caption">Cofar</span>
+										<span className="btn-caption min-h-16!">Cofar</span>
 									</a>
 								</li>
 								<li className="footer-nav__item anim-uni-in-up">
@@ -53,7 +53,7 @@ export default function Footer({ title, logoSrc }: Props) {
 										href={staticPath("/proyectos/bootcamp")}
 										className="footer-nav__link btn-anim"
 									>
-										<span className="btn-caption">Bootcamp</span>
+										<span className="btn-caption min-h-16!">Bootcamp</span>
 									</a>
 								</li>
 								<li className="footer-nav__item anim-uni-in-up">
@@ -61,7 +61,7 @@ export default function Footer({ title, logoSrc }: Props) {
 										href={staticPath("/proyectos/covida")}
 										className="footer-nav__link btn-anim"
 									>
-										<span className="btn-caption">Covida</span>
+										<span className="btn-caption min-h-16!">Covida</span>
 									</a>
 								</li>
 							</ul>
