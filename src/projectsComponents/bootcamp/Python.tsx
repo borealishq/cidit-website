@@ -2,12 +2,58 @@ import { staticPath } from "../../utils/staticPath";
 
 export default function Python() {
 	return (
-		<div className="mxd-section padding-stacked-section">
+		<div id="python-section" className="mxd-section padding-stacked-section">
+			<style>{`
+				@media (max-width: 1023px) {
+					#python-section .pin-spacer {
+						padding: 0 !important;
+						height: auto !important;
+						min-height: 0 !important;
+						position: relative !important;
+						inset: auto !important;
+						display: block !important;
+					}
+					#python-section .stack-wrapper {
+						position: relative !important;
+						transform: none !important;
+						inset: auto !important;
+						width: 100% !important;
+						height: auto !important;
+						padding: 0 !important;
+					}
+					#python-section .services-stack {
+						height: auto !important;
+						min-height: 0 !important;
+						display: flex !important;
+						flex-direction: column !important;
+						gap: 1.5rem !important;
+					}
+					#python-section .stack-item {
+						position: relative !important;
+						transform: none !important;
+						top: auto !important;
+						left: auto !important;
+						opacity: 1 !important;
+						height: auto !important;
+						margin: 0 !important;
+						padding: 0 !important;
+					}
+					#python-section .stack-offset {
+						display: none !important;
+					}
+					#python-section .mxd-services-stack__inner {
+						height: auto !important;
+						min-height: 550px !important;
+						padding-bottom: 2.6rem !important;
+					}
+				}
+			`}</style>
 			<div className="mxd-container grid-container">
 				<div className="mxd-block mxd-grid-item no-margin">
 					<div className="content__block">
 						<div className="stack-wrapper in-content-stack">
 							<div className="stack-offset"></div>
+
 							<div className="services-stack">
 								<div className="stack-item">
 									<div className="mxd-services-stack__inner justify-between bg-linear-to-r! from-black! to-stone-700!">
@@ -20,11 +66,11 @@ export default function Python() {
 											</div>
 										</div>
 
-										<div className="mxd-services-stack__title width-60">
+										<div className="mxd-services-stack__title width-60 relative z-20">
 											<h3 className="opposite">¿Qué es Python?</h3>
 										</div>
 
-										<div className="mxd-services-stack__info width-60">
+										<div className="mxd-services-stack__info width-60 relative z-20">
 											<p className="t-small-mobile t-opposite text-balance">
 												Python es un lenguaje de programación de alto nivel,
 												conocido por su legibilidad y versatilidad. Se utiliza
@@ -62,13 +108,13 @@ export default function Python() {
 											</div>
 										</div>
 
-										<div className="mxd-services-stack__title w-300!">
+										<div className="mxd-services-stack__title w-300! relative z-20">
 											<h3 className="opposite">
 												Porqué tomar el curso de Python
 											</h3>
 										</div>
 
-										<div className="mxd-services-stack__info width-60">
+										<div className="mxd-services-stack__info width-60 relative z-20">
 											<p className="t-small-mobile t-opposite text-balance">
 												Python se utiliza en una amplia gama de campos, desde
 												desarrollo web y ciencia de datos hasta inteligencia
@@ -100,10 +146,10 @@ export default function Python() {
 												<i className="ph ph-arrow-up-right"></i>
 											</a>
 										</div>
-										<div className="mxd-services-stack__title width-60">
+										<div className="mxd-services-stack__title width-60 relative z-20">
 											<h3>Para que se usa Python</h3>
 										</div>
-										<div className="mxd-services-stack__info width-60">
+										<div className="mxd-services-stack__info width-60 relative z-20">
 											<p className="t-small-mobile text-balance">
 												Python es un lenguaje de programación versátil con una
 												amplia gama de aplicaciones.
@@ -149,12 +195,12 @@ export default function Python() {
 												<i className="ph ph-arrow-up-right"></i>
 											</a>
 										</div>
-										<div className="mxd-services-stack__title width-60">
+										<div className="mxd-services-stack__title width-60 relative z-20">
 											<h3 className="opposite">
 												Cuáles son las características de Python
 											</h3>
 										</div>
-										<div className="mxd-services-stack__info width-201 columns-2 gap-15">
+										<div className="mxd-services-stack__info width-201 max-lg:columns-1 columns-2 gap-15 relative z-20">
 											<p className="t-small-mobile t-opposite- text-balance">
 												Es un lenguaje conocido por su sintaxis clara y legible,
 												lo que facilita el aprendizaje y uso. Es un lenguaje
