@@ -67,7 +67,9 @@ export default function Python() {
 										</div>
 
 										<div className="mxd-services-stack__title width-60 relative z-20">
-											<h3 className="opposite">¿Qué es Python?</h3>
+											<h3 className="opposite text-5xl! lg:text-[6rem]!">
+												¿Qué es Python?
+											</h3>
 										</div>
 
 										<div className="mxd-services-stack__info width-60 relative z-20">
@@ -85,7 +87,7 @@ export default function Python() {
 											</p>
 										</div>
 
-										<div className="parallax-img-small w-200! h-full! absolute right-20 bottom-0 z-10 [&>div]:flex! [&>div]:items-center!">
+										<div className="parallax-img-small w-80! h-full! absolute right-20 bottom-0 z-10 [&>div]:flex! [&>div]:items-center! xl:w-200! xl:h-full!">
 											<img
 												src={staticPath(
 													"projects/img/bootcamp/python-logo.avif"
@@ -109,7 +111,7 @@ export default function Python() {
 										</div>
 
 										<div className="mxd-services-stack__title w-300! relative z-20">
-											<h3 className="opposite">
+											<h3 className="opposite text-5xl! lg:text-[6rem]!">
 												Porqué tomar el curso de Python
 											</h3>
 										</div>
@@ -147,7 +149,9 @@ export default function Python() {
 											</a>
 										</div>
 										<div className="mxd-services-stack__title width-60 relative z-20">
-											<h3>Para que se usa Python</h3>
+											<h3 className="text-5xl! lg:text-[6rem]!">
+												Para que se usa Python
+											</h3>
 										</div>
 										<div className="mxd-services-stack__info width-60 relative z-20">
 											<p className="t-small-mobile text-balance">
@@ -165,16 +169,17 @@ export default function Python() {
 												y desarrollo de juegos.
 											</p>
 										</div>
+
 										<div className="services-stack__image">
-											<img
+											{/* <img
 												className="service-img service-img-s"
 												src={staticPath(
 													"projects/img/services/800x800_ser-03.webp"
 												)}
 												alt="Service/Feature Image"
-											/>
+											/> */}
 											<img
-												className="service-img service-img-m"
+												className="service-img- service-img-m-- w-80! h-auto! absolute right-0 top-0 lg:w-200!"
 												src={staticPath(
 													"projects/img/services/1000x1000_ser-03.webp"
 												)}
@@ -195,8 +200,8 @@ export default function Python() {
 												<i className="ph ph-arrow-up-right"></i>
 											</a>
 										</div>
-										<div className="mxd-services-stack__title width-60 relative z-20">
-											<h3 className="opposite">
+										<div className="mxd-services-stack__title width-40 relative z-20 lg:width-60">
+											<h3 className="opposite text-5xl! lg:text-[6rem]!">
 												Cuáles son las características de Python
 											</h3>
 										</div>
