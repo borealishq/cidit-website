@@ -10,6 +10,5 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-    site: "https://cidit.website.io",
-    base: process.env.NODE_ENV === "production" ? "/cidit-website" : "/",
+    site: "https://www.ciditpy.org",
 });
