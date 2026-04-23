@@ -5,6 +5,12 @@ export default function ProjectComponents() {
 		<div className="mxd-section padding-grid-pre-mtext overflow-hidden -mt-120!">
 			<div className="mxd-container grid-container">
 				<div className="mxd-block">
+					<div className="mxd-section-title text-center mb-20!">
+						<h2 className="text-6xl! lg:text-7xl! text-white!">
+							Componentes del Proyecto
+						</h2>
+					</div>
+
 					<div className="mxd-stats-cards">
 						<div className="container-fluid px-0">
 							<div className="row gx-0">

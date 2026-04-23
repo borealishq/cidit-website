@@ -21,29 +21,8 @@ export default function Partners() {
 					<div className="row gx-0">
 						<PartnerBox
 							{...{
-								name: "Bid Lab",
-								logo: "assets/img/partners/bid-lab.webp",
-							}}
-						/>
-
-						<PartnerBox
-							{...{
-								name: "Sec. de Políticas Linüísticas",
-								logo: "assets/img/partners/politicas-linguisticas.webp",
-							}}
-						/>
-
-						<PartnerBox
-							{...{
 								name: "FGV",
 								logo: "assets/img/partners/fgv.webp",
-							}}
-						/>
-
-						<PartnerBox
-							{...{
-								name: "Univ. de la Rep. Uruguay",
-								logo: "assets/img/partners/udelar.webp",
 							}}
 						/>
 
@@ -128,13 +107,6 @@ export default function Partners() {
 							{...{
 								name: "Typsa",
 								logo: "assets/img/partners/typsa.webp",
-							}}
-						/>
-
-						<PartnerBox
-							{...{
-								name: "Conacyt",
-								logo: "assets/img/partners/conacyt.webp",
 							}}
 						/>
 					</div>

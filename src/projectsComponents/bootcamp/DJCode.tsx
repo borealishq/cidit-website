@@ -20,15 +20,15 @@ export default function DJCode() {
 
 								<div className="space-y-7! [&>*]:text-white! [&>*]:text-3xl!">
 									<p className="anim-uni-in-up text-6xl! leading-relaxed">
-										Nacimos aprendiendo a hacer bootcamp para jóvenes con
-										vulnerabilidad de distintos espacios territoriales en el
-										Paraguay desde el año 2023, implementando un proyecto
-										denominado ATN/JF-19666-PR, Desarrollo de jóvenes talentos
-										para la transformación digital: creación de oportunidades
-										globales de empleo, cuya finalidad fue formar a jóvenes a
-										través de un bootcamp en la programación en el lenguaje
-										Python y facilitar su inserción laboral en el campo de la
-										tecnología.
+										En el entorno actual, aprender lenguajes ya no es
+										suficiente: el verdadero reto es aplicar ese conocimiento
+										para alcanzar objetivos reales. En DJ CODE no solo
+										enseñamos código; construimos las capacidades estratégicas
+										que tu organización necesita. Vos definís el objetivo,
+										nosotros diseñamos la currícula exacta, y con el
+										acompañamiento de nuestros mentores garantizamos que el
+										aprendizaje se traduzca en práctica efectiva y resultados
+										tangibles.
 									</p>
 								</div>
 							</div>

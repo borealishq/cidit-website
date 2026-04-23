@@ -11,7 +11,7 @@ import Sponsors from "../../../projectsComponents/guarania/Sponsors.tsx";
 import Reviews from "../../../projectsComponents/guarania/Reviews.tsx";
 import Gallery from "../../../projectsComponents/guarania/Gallery.tsx";
 import StaffList from "../../../projectsComponents/guarania/StaffList.tsx";
-import Promo from "../../../projectsComponents/guarania/Promo.tsx";
+// import Promo from "../../../projectsComponents/guarania/Promo.tsx"; // re-enable with <Promo /> below once banners are updated
 
 import { staticPath } from "../../../utils/staticPath";
 import { getSEO } from "../../../data/seoData";
@@ -45,7 +45,8 @@ const seo = getSEO("guarania");
 	<Hero />
 	<ProjectComponents />
 	<BoxedContent />
-	<Promo />
+	{/* Promo banners hidden temporarily (per Teresa 2026-04-22): current art embeds outdated BID Lab logo. Re-enable once Materia Gris delivers updated banners. */}
+	{/* <Promo /> */}
 	<Gallery client:only="react" {...{ gallery: galleryData }} />
 	<div class="h-21"></div>
 	<StaffList />

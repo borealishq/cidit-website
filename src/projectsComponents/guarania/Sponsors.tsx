@@ -26,17 +26,11 @@ export default function Sponsors() {
 					</div>
 				</div> */}
 
-				<div className="flex justify-center gap-10 xl:gap-20">
+				<div className="flex justify-center">
 					<img
-						src={staticPath("projects/img/guarania/bid-lab.gif")}
-						alt="BID LAB"
-						className="w-auto h-20! object-contain mix-blend-darken"
-					/>
-
-					<img
-						src={staticPath("projects/img/guarania/microsoft.avif")}
-						alt="Microsoft"
-						className="w-auto h-20! object-contain mix-blend-darken"
+						src={staticPath("projects/img/guarania/bid-lab.svg")}
+						alt="BID Lab"
+						className="w-auto h-24! object-contain"
 					/>
 				</div>
 
