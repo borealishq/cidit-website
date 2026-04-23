@@ -22,7 +22,12 @@ export default function CoursesPageContent() {
 							"assets/img/courses/gestion-contratos-obra-publica-fidic.avif",
 							"assets/img/courses/gestion-contratos-obra-publica-fidic-2.avif",
 						],
-						professors: ["Ing. Mauricio Guglielmi"],
+						professors: [
+							{
+								name: "Ing. Mauricio Guglielmi",
+								photo: "assets/img/profesores/mauricio-guglielmi.png",
+							},
+						],
 						link: "/cursos/gestion-de-contratos-de-obra-publica-con-experiencia-fidici",
 					}}
 				/>
@@ -37,7 +42,12 @@ export default function CoursesPageContent() {
 							"assets/img/courses/curso-costo-4w-2026.avif",
 							"assets/img/courses/curso-costo-4w-2026-2.avif",
 						],
-						professors: ["Ing. Carlos Aguade"],
+						professors: [
+							{
+								name: "Ing. Carlos Aguade",
+								photo: "assets/img/profesores/carlos-aguade.jpg",
+							},
+						],
 						link: "/cursos/curso-costo-4w-2026",
 					}}
 				/>
@@ -54,8 +64,14 @@ export default function CoursesPageContent() {
 							"assets/img/courses/estabilizacion-subrasantes-subbases-bases-camino-2.avif",
 						],
 						professors: [
-							"Dr. Ing. Gerardo Botasso",
-							"Dr. Ing. Hugo Bianchetto",
+							{
+								name: "Dr. Ing. Gerardo Botasso",
+								photo: "assets/img/profesores/gerardo-botasso.jpeg",
+							},
+							{
+								name: "Dr. Ing. Hugo Bianchetto",
+								photo: "assets/img/profesores/hugo-bianchetto.jpeg",
+							},
 						],
 						link: "/cursos/proceso-de-estabilizacion-de-subrasantes-y-bases-de-camino",
 					}}
@@ -71,7 +87,12 @@ export default function CoursesPageContent() {
 							"assets/img/courses/tecnologia-hormigon-aplicada.avif",
 							"assets/img/courses/tecnologia-hormigon-aplicada-2.avif",
 						],
-						professors: ["CDH Ing. Maximiliano Segerer y equipo"],
+						professors: [
+							{
+								name: "CDH Ing. Maximiliano Segerer y equipo",
+								photo: "assets/img/profesores/maximiliano-segerer.jpg",
+							},
+						],
 						link: "/cursos/tecnologias-de-hormigon-aplicada",
 					}}
 				/>
@@ -87,8 +108,14 @@ export default function CoursesPageContent() {
 							"assets/img/courses/planificacion-administracion-red-vial-concesiones-crema-gmans-2.avif",
 						],
 						professors: [
-							"Dr. Ing. Gerardo Botasso",
-							"Dr. Ing. Hugo Bianchetto",
+							{
+								name: "Dr. Ing. Gerardo Botasso",
+								photo: "assets/img/profesores/gerardo-botasso.jpeg",
+							},
+							{
+								name: "Dr. Ing. Hugo Bianchetto",
+								photo: "assets/img/profesores/hugo-bianchetto.jpeg",
+							},
 						],
 						link: "/cursos/planificacion-y-administracion-de-la-red-vial-concesiones-crema-gmans",
 					}}
@@ -105,8 +132,8 @@ export default function CoursesPageContent() {
 							"assets/img/courses/inspeccion-evaluacion-gerenciamiento-puentes-2.avif",
 						],
 						professors: [
-							"Ing. Pedro Manuel Lozada",
-							"Arq. Gustavo Javier Bandel",
+							{ name: "Ing. Pedro Manuel Lozada" },
+							{ name: "Arq. Gustavo Javier Bandel" },
 						],
 						link: "/cursos/inspeccion-evaluacion-y-gerenciamiento-de-puentes",
 					}}
@@ -122,7 +149,12 @@ export default function CoursesPageContent() {
 							"assets/img/courses/control-obras-viales.avif",
 							"assets/img/courses/control-obras-viales-2.avif",
 						],
-						professors: ["Dr. Ing. Gerardo Botasso"],
+						professors: [
+							{
+								name: "Dr. Ing. Gerardo Botasso",
+								photo: "assets/img/profesores/gerardo-botasso.jpeg",
+							},
+						],
 						link: "/cursos/control-de-obras-viales",
 					}}
 				/>
@@ -137,7 +169,12 @@ export default function CoursesPageContent() {
 							"assets/img/courses/perfil-4w-2026.avif",
 							"assets/img/courses/perfil-4w-2026-2.avif",
 						],
-						professors: ["Ing. Carlos Aguade"],
+						professors: [
+							{
+								name: "Ing. Carlos Aguade",
+								photo: "assets/img/profesores/carlos-aguade.jpg",
+							},
+						],
 						link: "/cursos/perfil-4w-2026",
 					}}
 				/>
@@ -152,7 +189,10 @@ export default function CoursesPageContent() {
 							"assets/img/courses/mantenimiento-edilicio-hospitales.avif",
 							"assets/img/courses/mantenimiento-edilicio-hospitales-2.avif",
 						],
-						professors: ["Arq. Jorge Raúl Carrasquet", "Arq. Jorge Manuel"],
+						professors: [
+							{ name: "Arq. Jorge Raúl Carrasquet" },
+							{ name: "Arq. Jorge Manuel" },
+						],
 						link: "/cursos/mantenimiento-de-hospitales",
 					}}
 				/>
@@ -165,6 +205,8 @@ export default function CoursesPageContent() {
 	);
 }
 
+type Professor = { name: string; photo?: string };
+
 type CourseProps = {
 	title: string;
 	bgColor: "black" | "gray";
@@ -172,7 +214,7 @@ type CourseProps = {
 	monthNumber: string;
 	images: [string, string];
 	link: string;
-	professors?: string[];
+	professors?: Professor[];
 };
 
 const Course = ({
@@ -226,20 +268,22 @@ const Course = ({
 											{professors.map((e) => (
 												<div
 													className="postbox-author-box flex gap-2 items-center mt-8!"
-													key={e}
+													key={e.name}
 												>
 													<div className="postbox-details-author-img mr-15">
 														<img
 															src={staticPath(
-																"assets/img/inner-image/blog/standard/blog-av-1.jpg"
+																e.photo ??
+																	"assets/img/inner-image/blog/standard/blog-av-1.jpg"
 															)}
-															alt=""
+															alt={e.name}
+															className="object-cover! aspect-square!"
 														/>
 													</div>
 													<div className="postbox-author-info-wrap">
 														<div className="postbox-author-info text-start">
 															<h4 className="postbox-author-name text-white font-semibold!">
-																{e}
+																{e.name}
 															</h4>
 														</div>
 													</div>
