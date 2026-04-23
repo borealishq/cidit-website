@@ -11,6 +11,7 @@ import Sponsors from "../../../projectsComponents/guarania/Sponsors.tsx";
 import Reviews from "../../../projectsComponents/guarania/Reviews.tsx";
 import Gallery from "../../../projectsComponents/guarania/Gallery.tsx";
 import StaffList from "../../../projectsComponents/guarania/StaffList.tsx";
+import Alianzas from "../../../projectsComponents/guarania/Alianzas.tsx";
 // import Promo from "../../../projectsComponents/guarania/Promo.tsx"; // re-enable with <Promo /> below once banners are updated
 
 import { staticPath } from "../../../utils/staticPath";
@@ -50,6 +51,7 @@ const seo = getSEO("guarania");
 	<Gallery client:only="react" {...{ gallery: galleryData }} />
 	<div class="h-21"></div>
 	<StaffList />
+	<Alianzas />
 	<Sponsors />
 	<Reviews />
 </ProjectLayout>

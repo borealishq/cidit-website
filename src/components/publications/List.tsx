@@ -1,3 +1,7 @@
+import { staticPath } from "../../utils/staticPath";
+
+const doc = (path: string) => staticPath(`documents/publicaciones/${path}`);
+
 const listOfDocuments = [
 	{
 		year: "2025",
@@ -5,7 +9,7 @@ const listOfDocuments = [
 			{
 				headline: "Diagnóstico de GuaranIA",
 				subheadline: "",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: "#",
 			},
 		],
 	},
@@ -15,12 +19,12 @@ const listOfDocuments = [
 			{
 				headline: "Estudio y mapeo de empresas",
 				subheadline: "Desarrollo Jóven",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: "#",
 			},
 			{
 				headline: "Tecnología digital como herramienta de inclusión",
 				subheadline: "",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: "#",
 			},
 		],
 	},
@@ -30,18 +34,18 @@ const listOfDocuments = [
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Marzo",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-marzo-2018.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Febrero",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-febrero-2018.pdf"),
 			},
 			{
 				headline:
 					"Sistematización de la jornada internacional de innovación en la gestión de emprendedores involucrados a la economía creativa en un mercado competitivo",
 				subheadline: "",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("sistematizacion-jornada-innovacion-2018.pdf"),
 			},
 		],
 	},
@@ -51,22 +55,22 @@ const listOfDocuments = [
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Diciembre",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-diciembre-2017.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Julio",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-julio-2017.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Junio",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-junio-2017.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Abril",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-abril-2017.pdf"),
 			},
 		],
 	},
@@ -76,32 +80,27 @@ const listOfDocuments = [
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Diciembre",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-diciembre-2016.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Noviembre",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-noviembre-2016.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Octubre",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-octubre-2016.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Septiembre",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
-			},
-			{
-				headline: "Boletín tecnológico",
-				subheadline: "Agosto",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-septiembre-2016.pdf"),
 			},
 			{
 				headline: "Boletín tecnológico",
 				subheadline: "Julio",
-				link: "https://ciditpy.org/wp-content/uploads/2020/12/cidit-boletin-marzo-2018.pdf",
+				link: doc("cidit-boletin-julio-2016.pdf"),
 			},
 		],
 	},
@@ -140,15 +139,21 @@ export default function List() {
 																{item.subheadline}
 															</span>
 															<div className="ca-award-btn">
-																<a
-																	className="tp-btn-green tp-btn-anim"
-																	href={item.link}
-																	target="_blank"
-																>
-																	<div className="tp-btn-text">
-																		Descargar
-																	</div>{" "}
-																</a>
+																{item.link === "#" ? (
+																	<span className="text-gray-500! italic text-base!">
+																		Próximamente
+																	</span>
+																) : (
+																	<a
+																		className="tp-btn-green tp-btn-anim"
+																		href={item.link}
+																		target="_blank"
+																	>
+																		<div className="tp-btn-text">
+																			Descargar
+																		</div>{" "}
+																	</a>
+																)}
 															</div>
 														</div>
 													</div>

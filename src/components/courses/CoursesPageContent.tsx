@@ -16,6 +16,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Gestión de Contratos de Obra Pública con Experiencia FIDIC",
 						bgColor: "black",
+						courseNumber: "01",
 						monthNumber: "02",
 						images: [
 							"assets/img/courses/gestion-contratos-obra-publica-fidic.avif",
@@ -30,6 +31,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Curso Costo 4W 2026",
 						bgColor: "gray",
+						courseNumber: "02",
 						monthNumber: "03",
 						images: [
 							"assets/img/courses/curso-costo-4w-2026.avif",
@@ -45,6 +47,7 @@ export default function CoursesPageContent() {
 						title:
 							"Proceso de Estabilización de Subrasantes, Sub-bases y Bases de Camino",
 						bgColor: "black",
+						courseNumber: "03",
 						monthNumber: "04",
 						images: [
 							"assets/img/courses/estabilizacion-subrasantes-subbases-bases-camino.avif",
@@ -62,6 +65,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Tecnología de Hormigón Aplicada",
 						bgColor: "gray",
+						courseNumber: "04",
 						monthNumber: "05",
 						images: [
 							"assets/img/courses/tecnologia-hormigon-aplicada.avif",
@@ -76,6 +80,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Planificación y administración de la Red Vial",
 						bgColor: "black",
+						courseNumber: "05",
 						monthNumber: "06",
 						images: [
 							"assets/img/courses/planificacion-administracion-red-vial-concesiones-crema-gmans.avif",
@@ -93,6 +98,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Inspección, Evaluación y Gerenciamiento de Puentes",
 						bgColor: "gray",
+						courseNumber: "06",
 						monthNumber: "08",
 						images: [
 							"assets/img/courses/inspeccion-evaluacion-gerenciamiento-puentes.avif",
@@ -110,6 +116,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Control de Obras Viales",
 						bgColor: "black",
+						courseNumber: "07",
 						monthNumber: "09",
 						images: [
 							"assets/img/courses/control-obras-viales.avif",
@@ -124,6 +131,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Perfil 4W 2026",
 						bgColor: "gray",
+						courseNumber: "08",
 						monthNumber: "10",
 						images: [
 							"assets/img/courses/perfil-4w-2026.avif",
@@ -138,6 +146,7 @@ export default function CoursesPageContent() {
 					{...{
 						title: "Mantenimiento de Hospitales",
 						bgColor: "black",
+						courseNumber: "09",
 						monthNumber: "11",
 						images: [
 							"assets/img/courses/mantenimiento-edilicio-hospitales.avif",
@@ -159,6 +168,7 @@ export default function CoursesPageContent() {
 type CourseProps = {
 	title: string;
 	bgColor: "black" | "gray";
+	courseNumber: string;
 	monthNumber: string;
 	images: [string, string];
 	link: string;
@@ -168,6 +178,7 @@ type CourseProps = {
 const Course = ({
 	title,
 	bgColor,
+	courseNumber,
 	monthNumber,
 	images,
 	link,
@@ -205,7 +216,7 @@ const Course = ({
 					<div className="">
 						<div className="service-3-process-wrap mb-30">
 							<div className="service-3-process-list">
-								<span>{monthNumber}</span>
+								<span>{courseNumber}</span>
 								<div className="">
 									<h2>{parse(title)}</h2>
 									<p className="text-gray-400! pt-10">{monthName} 2026</p>
