@@ -9,7 +9,7 @@ const listOfDocuments = [
 			{
 				headline: "Diagnóstico de GuaranIA",
 				subheadline: "",
-				link: "#",
+				link: doc("guarania-diagnostico-2025.pdf"),
 			},
 		],
 	},

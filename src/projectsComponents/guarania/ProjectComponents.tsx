@@ -25,7 +25,11 @@ export default function ProjectComponents() {
 										<div className="mxd-stats-cards__btngroup">
 											<a
 												className="btn btn-anim btn-default btn-outline opposite slide-right-up"
-												href="#"
+												href={staticPath(
+													"documents/publicaciones/guarania-diagnostico-2025.pdf"
+												)}
+												target="_blank"
+												rel="noopener"
 											>
 												<span className="btn-caption">
 													Ver resultados del diagnóstico
