@@ -73,3 +73,5 @@
 
 sync:
     remote: "git+ssh://git@github.com/borealishq/cidit-website.git"
+export:
+    auto: true
