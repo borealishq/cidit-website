@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "cidit_website",
+  "project_id": "d4c7f913-aa73-4b9e-acbc-49b9e9deeb53"
+}

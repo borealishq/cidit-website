@@ -29,3 +29,10 @@ pnpm-debug.log*
 # claude specific
 .claude/settings.local.json
 .playwright-mcp/
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/
+*.gate.lock*
