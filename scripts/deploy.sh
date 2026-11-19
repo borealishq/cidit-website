@@ -58,6 +58,14 @@ set +a
 : "${FTP_PASS:?FTP_PASS must be set in .env.deploy}"
 : "${FTP_REMOTE_PATH:?FTP_REMOTE_PATH must be set in .env.deploy}"
 
+# Guard against a "~/..." value that the shell expanded into a local path.
+case "${FTP_REMOTE_PATH}" in
+    /Users/*|/home/*|"~"*)
+        echo "ERROR: FTP_REMOTE_PATH looks like a local-machine path (${FTP_REMOTE_PATH})." >&2
+        exit 1
+        ;;
+esac
+
 # --- build ---
 if [[ "${SKIP_BUILD}" -eq 0 ]]; then
     echo "==> Building site..."
@@ -72,7 +80,9 @@ if [[ ! -d dist ]]; then
 fi
 
 # --- assemble lftp mirror command ---
-MIRROR_OPTS="-R --parallel=4 --verbose"
+# --parallel=2 and --no-perms: higher concurrency drops files on DirectAdmin
+# FTPS, and SITE CHMOD is restricted there (its 550 errors hide real failures).
+MIRROR_OPTS="-R --parallel=2 --no-perms --only-newer --verbose"
 [[ "${DRY_RUN}" -eq 1 ]] && MIRROR_OPTS="${MIRROR_OPTS} --dry-run"
 [[ "${DELETE}" -eq 1 ]] && MIRROR_OPTS="${MIRROR_OPTS} --delete"
 
@@ -80,16 +90,26 @@ MIRROR_OPTS="-R --parallel=4 --verbose"
 MIRROR_OPTS="${MIRROR_OPTS} --exclude-glob .well-known/ --exclude-glob cgi-bin/"
 
 echo "==> Deploying dist/ -> ${FTP_HOST}:${FTP_REMOTE_PATH}"
-[[ "${DRY_RUN}" -eq 1 ]] && echo "    (dry run — no files will be changed)"
-[[ "${DELETE}" -eq 1 ]] && echo "    (delete mode — remote files not in dist/ will be removed)"
+[[ "${DRY_RUN}" -eq 1 ]] && echo "    (dry run: no files will be changed)"
+[[ "${DELETE}" -eq 1 ]] && echo "    (delete mode: remote files not in dist/ will be removed)"
 
-lftp -u "${FTP_USER},${FTP_PASS}" "${FTP_HOST}" <<EOF
+# Credentials go through lftp's stdin ("user" command), never "-u user,pass"
+# on the command line, where any local process can read them from ps.
+# cmd:fail-exit makes a failed command fail the script; mirror alone exits 0
+# even when individual uploads fail.
+# The sed filter masks "://user:pass@" in lftp's output: --dry-run prints
+# every planned transfer as a full URL with the password in it. pipefail
+# (set at the top) keeps lftp's exit code.
+lftp <<EOF 2>&1 | sed -E 's#://[^@[:space:]]*@#://***@#g'
 set ssl:verify-certificate no
 set ftp:ssl-allow yes
 set ftp:ssl-force yes
 set ftp:ssl-protect-data yes
 set net:max-retries 3
 set net:timeout 20
+set cmd:fail-exit yes
+open "${FTP_HOST}"
+user "${FTP_USER}" "${FTP_PASS}"
 mirror ${MIRROR_OPTS} dist/ ${FTP_REMOTE_PATH}
 bye
 EOF
